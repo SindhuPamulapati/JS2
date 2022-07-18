@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Travel Booking</title>
+        <link href="./stylesheet.css" rel="stylesheet"/>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <header>
+          <nav class = "head">
+                 <ul>
+                  <li>
+                    <h2>TravelAround</h2>               
+                  </li>
+                  <li>
+                    <a href="./signup.html">SIGN-UP</a> <a href="./login.html">LOG-IN</a>
+                  </li>                 
+                </ul>
+              </nav>
+        </header>
+        <div class = "appinfo">
+          <div class = "top">
+            <div class = "logo">
+              <img src="./images/wp2379283.webp"/>
+            </div>
+            
+              <section id="first-tab-group" class="tabgroup">
+                  <div id="tab1">
+                      <div class="submit-form">
+                          <h4>Check availability for <em>direction</em>:</h4>
+                          <form id="form-submit" fname="myForm" action="" method="post" onsubmit="return validateForm()">
+                              <div class="row">
+                                  <div class="from">
+                                      <fieldset>
+                                          <label for="from">From:</label>
+                                          <select required name='from' onchange='this.form.()'>
+                                              <option value="">Select a location...</option>
+                                              <option value="Cambodia">Cambodia</option>
+                                              <option value="Hong Kong">Hong Kong</option>
+                                              <option value="India">India</option>
+                                              <option value="Japan">Japan</option>
+                                              <option value="Korea">Korea</option>
+                                              
+                                          </select>
+                                      </fieldset>
+                                  </div>
+                                  <div class="to">
+                                      <fieldset>
+                                          <label for="to">To:</label>
+                                          <select required name='to' onchange='this.form.()'>
+                                              <option value="">Select a location...</option>
+                                              <option value="Cambodia">Cambodia</option>
+                                              <option value="Hong Kong">Hong Kong</option>
+                                              <option value="India">India</option>
+                                              <option value="Japan">Japan</option>
+                                              <option value="Korea">Korea</option>
+                                              
+                                          </select>
+                                      </fieldset>
+                                  </div>
+                                  <div class="departure">
+                                      <fieldset>
+                                          <label for="departure">Departure date:</label>
+                                          <input name="departure" type="text" class="form-control date" id="departure" placeholder="Select date..." required="" onchange="UTCDate()">
+                                        
+                                        </fieldset>
+                                      
+                                  </div>
+                                  <div class="return">
+                                      <fieldset>
+                                          <label for="return">Return date:</label>
+                                          <input name="return" type="text" class="form-control date" id="return" placeholder="Select date..." required=""onchange='this.form.()'>
+                                      </fieldset>
+                                  </div>
+                                  <div class="select">
+                                      <div class="radio-select">
+                                          <div class="row">
+                                              <div class="round">
+                                                  <label for="round">RoundTrip</label>
+                                                  <input type="radio" name="trip" id="round" value="round" required="required"onchange='this.form.()'>
+                                              </div>
+                                              <div class="oneway">
+                                                  <label for="oneway">Oneway</label>
+                                                  <input type="radio" name="trip" id="oneway" value="one-way" required="required"onchange='this.form.()'>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="noofpassengers"><h3>No of Passengers</h3>
+                                    <label for="adult">Adult:</label>
+                                    <input type="text" required="required" placeholder="No Of Adults" required="required">
+                                    <label for="adult">Children:</label>
+                                    <input type="text" required="required" placeholder="No Of Childrens" required="required">                                  </div>
+                                  <div class="Passengerdetails">
+                                    <div class="passenger1">
+                                        <fieldset>
+                                        <label for="passenger1">Passenger1details</label><br>
+                                        <label for = "name">Name: </label>
+                                        <input type="text" id="name" name="Passenger1details"  required="required" placeholder="Name..">
+                                        
+                                        <div class="gender">
+                                        <label for="gender">Gender: </label>
+                                        <input type="radio"  value="female">
+                                        <label for="female">Female</label>
+                                        <input type="radio"  value="male">
+                                        <label for="male">Male</label><br>
+                                         <label for="age">Age</label>
+                                        <input type="text" id="age" required="required">
+                                    </div>
+                                    </fieldset>
+                                    <div class="passenger2">
+                                        <fieldset>
+                                        <label for="passenger2">Passenger2details</label><br>
+                                        <label for = "name">Name: </label>
+                                        <input type="text" name="Passenger2details"  required="required" placeholder="Name..">
+                                        
+                                        <div class="gender">
+                                        <label for="gender">Gender: </label>
+                                        <input type="radio" id="passenger2" value="female">
+                                        <label for="female">Female</label>
+                                        <input type="radio" id="passenger2" value="male">
+                                        <label for="male">Male</label><br>
+                                        <label for="age">Age</label>
+                                        <input type="text" id="passenger2"  required="required">
+                                    </div>
+                                 </div>
+                                 <div>
+                                    <label for="email">Email</label>
+                                    <i class="far fa-envelope"></i>
+                                    <input type="email" name="email" id="email" placeholder="abc@gmail.com" />
+                                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                                    <i class="far fa-check-circle success-icon"></i>
+                                    <div class="error"></div>
+                                    <div>
+                                        <label for="mobile">Mobile</label>
+                                        <i class="far fa-envelope"></i>
+                                        <input type="tel" name="mobile" id="mobile"  placeholder="" />
+                                        <i class="fas fa-exclamation-circle failure-icon"></i>
+                                        <i class="far fa-check-circle success-icon"></i>
+                                        <div class="error"></div>
+                                  </div>
+                                  </div>
+                                  <div class="submit">
+                                      <fieldset>
+                                          <button type="submit" id="form-submit" class="btn">Book Ticket</button>
+                                      </fieldset>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  
+          </div>
+           
+        </div>
+        <footer>
+          <h3> Making booking system easy to travel around.</h3>
+        </footer>
+    </body>
+</html>

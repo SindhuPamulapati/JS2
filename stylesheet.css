@@ -1,0 +1,50 @@
+   body{
+   
+    background-color:aqua;
+    display: grid;
+    
+   
+}
+ img{
+   max-width: 100%;
+   max-height:min-content;
+ }
+
+.head ul{
+   background-color:rgb(20, 240, 240);
+    display: grid;
+    grid-gap: 5px;
+    padding: 0;
+    list-style:none;
+    grid-template-columns: 2fr 1fr;
+    max-height: fit-content;
+}
+.head h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size:xx-large;
+    text-align: center;
+ }
+ .head a{
+    font-size: medium;
+    text-align: left;
+ }
+ .top{
+   background-color:rgb(20, 240, 240);
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: "img apptag";
+   height: auto;
+  
+}
+.apptag p{
+   font-family: 'Courier New', Courier, monospace;
+   font-style: inherit;
+   font-size: small;
+}
+footer{
+   
+   font-size: x-small;
+   font-family: 'Courier New', Courier, monospace;
+   font-style: italic;
+}
